@@ -1,0 +1,230 @@
+#header {
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+  padding: 0 20px;
+  height: 3.5rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  -webkit-box-shadow: 0px 12px 8px -9px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 12px 8px -9px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 12px 8px -9px rgba(34, 60, 80, 0.2);
+  background-color: #eee;
+}
+
+.logo {
+  min-width: 60vw;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo > img {
+  max-width: 300px;
+  height: auto;
+  width: 100%;
+}
+
+#nav-bar ul {
+  min-width: 35vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#nav-bar ul li {
+  padding: 0 0.5rem;
+}
+
+.toogle-container {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+@media screen and (max-width: 800px) {
+  #header {
+    height: auto;
+  }
+  
+  .logo {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .logo > img {
+    max-width: 15rem;
+    height: auto;
+    width: 100%;
+  }
+  
+  .logo, li {
+    height: 3rem;
+  }
+
+  #nav-bar {
+    display: none;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #nav-bar ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #nav-bar li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #nav-bar a {
+    font-size: 1.5rem;
+  }
+
+  #nav-bar.open-menu {
+    display: flex;
+    animation: open-menu 0.5s linear;
+    -webkit-animation: open-menu 0.5s linear;
+  }
+
+  #nav-bar.close-menu {
+    display: flex;
+    animation: close-menu 0.5s linear;
+    -webkit-animation: close-menu 0.5s linear;
+  }
+
+  @keyframes open-menu {
+    from { 
+      opacity: 0; height: 0px;
+    }
+    to { 
+      opacity: 1; height: 144px;
+    }   
+  }
+
+  @keyframes close-menu {
+    from { 
+      opacity: 1; height: 144px;
+    }
+    to { 
+      opacity: 0; height: 0px;
+    }   
+  }
+
+  .toogle-container {
+    display: block;
+  }
+
+  #menu__toggle {
+    display: none;
+  }
+
+  .menu__btn {
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;  
+    cursor: pointer;
+    z-index: 1;
+  } 
+  
+  .humburger {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: #000;
+  }
+
+  .humburger1 {
+    right: 0rem;
+    top: -0.2rem;
+  }
+
+  .humburger2 {
+    top: 0.1rem;
+  }
+
+  .humburger3 {
+    top: -0.1rem;
+  }
+
+  .humburger4 {
+    right: 0rem;
+    top: 0.2rem;
+  }
+
+  #menu__toggle:checked + label > span.humburger2 {
+    transition: all 0.25s linear;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+  }
+
+  #menu__toggle:checked + label > span.humburger3 {
+    transition: all 0.25s linear;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+  }
+
+  #menu__toggle:checked + label > span.humburger1 {
+    right: 3rem;
+    opacity: 0;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+  }
+
+  #menu__toggle:checked + label > span.humburger4 {
+    right: -3rem;
+    opacity: 0;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+  }
+}
+
+/* ---------------------------- */
+
+@media only screen and (max-width: 480px) {
+
+}
+
+
+
+ 
