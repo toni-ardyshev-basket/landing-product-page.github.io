@@ -1,17 +1,18 @@
 main {
-  padding: 3.5rem 3.875rem 0 3.875rem;
   background-color: #eee;
   height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 #delivery {
-  margin-top: 2.5rem;  
+  margin-top: 5rem;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem 0;
+  gap: 1rem 0;
   text-align: center;
 }
 
@@ -19,8 +20,8 @@ main {
   margin: 0.5rem auto;
   max-width: 275px;
   width: 100%;
-  height: 2rem;
-  padding: 5px;
+  height: 2.5rem;
+  padding: 5px 10px;
   border: none;
   border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -36,14 +37,102 @@ main {
   width: 100%;
   height: 40px;
   border: none;
-  background-color:#f1c40f;
+  background-color: #f1c40f;
   text-transform: uppercase;
   font-weight: bold;
   font-family: inherit;
   font-size: inherit;
-  border-radius: 2px;;
+  border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.25 ease;
+  -webkit-transition: all 0.25 ease;
+  -moz-transition: all 0.25 ease;
+  -ms-transition: all 0.25 ease;
+  -o-transition: all 0.25 ease;
+}
+
+#delivery input[type="button"]:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+#delivery input[type="button"]:active {
+  transform: scale(.95);
+  -webkit-transform: scale(.95);
+  -moz-transform: scale(.95);
+  -ms-transform: scale(.95);
+  -o-transform: scale(.95);
+}
+
+
+.container {
+  margin-top: 3.5rem;
+  width: 100%;
+}
+
+.activity-company {
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.activity_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  line-height: 1.25;
+}
+
+.activity_item .icon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8.5rem;
+  color: darkorange;
+  padding: 5px;
+}
+
+.activity_item .description {
+  flex: 5;
+  padding: 20px ;
+  min-height: 8.5rem;
+  word-wrap: break-word;  
+}
+
+/* @media screen and (max-width: 800px) { 
+  .activity_item { 
+    flex-direction: column;
+  }
+
+  .activity_item .description {
+    text-align: center;
+  }
+} */
+
+
+
+/* ------------------------------- */
+
+
+@media only screen and (max-width: 480px) {
+  .activity_item { 
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  .activity_item .description {
+    text-align: center;
+  }
 }
