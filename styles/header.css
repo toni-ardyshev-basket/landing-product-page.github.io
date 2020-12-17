@@ -68,7 +68,7 @@
     width: 100%;
   }
   
-  .logo, li {
+  .logo, #nav-bar li {
     height: 3rem;
   }
 
