@@ -16,7 +16,7 @@
 }
 
 .logo {
-  min-width: 60vw;
+  min-width: 50vw;
   height: inherit;
   display: flex;
   align-items: center;
@@ -36,11 +36,10 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: 20px;
 }
 
 #nav-bar ul li {
-  padding: 0 0.5rem;
+  margin: 0 1rem;
 }
 
 .toogle-container {
@@ -77,6 +76,7 @@
     display: none;
     width: 100%;
     overflow: hidden;
+    height: 0;
   }
 
   #nav-bar ul {
@@ -91,22 +91,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1rem
   }
 
   #nav-bar a {
-    font-size: 1.25rem;
-  }
-
-  #nav-bar.open-menu {
-    display: flex;
-    animation: open-menu 0.5s linear;
-    -webkit-animation: open-menu 0.5s linear;
-  }
-
-  #nav-bar.close-menu {
-    display: flex;
-    animation: close-menu 0.5s linear;
-    -webkit-animation: close-menu 0.5s linear;
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: center;
   }
 
   @keyframes open-menu {
@@ -118,6 +109,12 @@
     }   
   }
 
+  #nav-bar.open-menu {
+    display: flex;
+    animation: open-menu 0.5s linear;
+    -webkit-animation: open-menu 0.5s linear;
+  }
+
   @keyframes close-menu {
     from { 
       opacity: 1; height: 144px;
@@ -125,6 +122,12 @@
     to { 
       opacity: 0; height: 0px;
     }   
+  }
+
+  #nav-bar.close-menu {
+    display: flex;
+    animation: close-menu 0.5s linear;
+    -webkit-animation: close-menu 0.5s linear;
   }
 
   .toogle-container {
@@ -149,7 +152,7 @@
     z-index: 1;
   } 
   
-  .humburger {
+  #menu__toggle + label > span.humburger {
     position: relative;
     display: inline-block;
     margin: 0 auto;
@@ -158,20 +161,20 @@
     background-color: #000;
   }
 
-  .humburger1 {
+  #menu__toggle + label > span.humburger1 {
     right: 0rem;
     top: -0.2rem;
   }
 
-  .humburger2 {
+  #menu__toggle + label > span.humburger2 {
     top: 0.1rem;
   }
 
-  .humburger3 {
+  #menu__toggle + label > span.humburger3 {
     top: -0.1rem;
   }
 
-  .humburger4 {
+  #menu__toggle + label > span.humburger4 {
     right: 0rem;
     top: 0.2rem;
   }
@@ -224,10 +227,6 @@
 }
 
 /* ---------------------------- */
-
-@media only screen and (max-width: 480px) {
-
-}
 
 
 
